@@ -8,19 +8,31 @@ class Tinder extends StatefulWidget {
 }
 
 class _TinderState extends State<Tinder> {
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: SizedBox(
+
+  Widget _body(){
+    return SizedBox(
+      width: double.infinity,
+      height: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Mudança de local'),
-            Text('Aplicativo de namoro')
-          ],
-        ),
-      ),
+                children: [
+                  Text('Location Changer'),
+                  Text('Plug in app for Tinter'),
+                ],
+              ), 
+      );
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            color: const Color.fromARGB(255, 236, 108, 151),
+          ),
+          _body(),
+        ],
+      )
     );
   }
 }
-
