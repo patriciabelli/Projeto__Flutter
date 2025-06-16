@@ -16,11 +16,22 @@ class _TinderState extends State<Tinder> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    child: Image.asset('assets/images/tinder_Logo.webp'),
+                  ),
+                  Container(height: 20,),
                   Text('Location Changer'),
                   Text('Plug in app for Tinter'),
+                  Container(height: 20),
+                  ElevatedButton.icon(
+                    onPressed: (){}, 
+                  label: Text('Login with Facebook'),),
                 ],
-              ), 
+              ),
       );
+      
   }
   @override
   Widget build(BuildContext context) {
@@ -28,7 +39,7 @@ class _TinderState extends State<Tinder> {
       body: Stack(
         children: [
           Container(
-            color: const Color.fromARGB(255, 236, 108, 151),
+            color: const Color.fromARGB(255, 236, 108, 161),
           ),
           _body(),
         ],
